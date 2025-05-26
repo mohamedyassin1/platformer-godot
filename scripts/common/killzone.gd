@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var timer = $Timer
+@onready var player = get_tree().get_first_node_in_group("player")
 
 func _on_body_entered(body):
 	print("You died!")
