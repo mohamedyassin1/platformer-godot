@@ -5,3 +5,5 @@ To get more comfortable with game development in Godot, I decided to build this 
 	- Ability for the player to roll
 		- Also to avoid enemy hits by rolling
 	- UI menus (pausing, resuming, tracking number of coins)
+		
+The game is on github pages so that you can try it: https://mohamedyassin1.github.io/platformer-playable/
