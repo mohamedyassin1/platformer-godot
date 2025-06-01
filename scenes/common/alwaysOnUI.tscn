@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbpcskk5ksjj3"]
+
+[ext_resource type="FontFile" uid="uid://bon7xe8h6b16v" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="1_xmfah"]
+[ext_resource type="Script" path="res://scripts/common/menuButton.gd" id="2_wxkac"]
+[ext_resource type="Script" path="res://scripts/common/label.gd" id="3_8ilie"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvnuv"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqhj4"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jq1vl"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuc3g"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 40.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xmfah")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_kvnuv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oqhj4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jq1vl")
+text = "Menu"
+script = ExtResource("2_wxkac")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -153.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = 64.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xmfah")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_uuc3g")
+text = "You collected 0 coins"
+autowrap_mode = 2
+script = ExtResource("3_8ilie")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

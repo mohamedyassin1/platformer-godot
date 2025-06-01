@@ -82,8 +82,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _ready():
-	add_to_group("player") # Add to group so that I can easily get it in other scripts using: 
-	# get_tree().get_first_node_in_group("player")
+	Global.player = self
 	
 # User a timer node to track rolling
 func _on_roll_timer_timeout():

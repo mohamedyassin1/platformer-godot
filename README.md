@@ -4,4 +4,4 @@ To get more comfortable with game development in Godot, I decided to build this 
 	- Ability for the player to double jump
 	- Ability for the player to roll
 		- Also to avoid enemy hits by rolling
-		
+	- UI menus (pausing, resuming, tracking number of coins)

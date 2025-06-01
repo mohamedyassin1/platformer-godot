@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://bk2mwx8tvuabp"]
+
+[ext_resource type="FontFile" uid="uid://bag8eh46dwt20" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="1_5ky7c"]
+[ext_resource type="Script" path="res://scripts/common/pause.gd" id="1_jdmj4"]
+[ext_resource type="FontFile" uid="uid://bon7xe8h6b16v" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_5p4u7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4p7kx"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="Theme" id="Theme_q8gpu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rou2s"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35u12"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0wmc"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+layer = 5
+script = ExtResource("1_jdmj4")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 208.0
+offset_top = 60.0
+offset_right = 208.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -328.0
+offset_right = 192.0
+offset_bottom = -184.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5p4u7")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_4p7kx")
+text = "Move with W,A,D or arrow keys
+
+Dodge/Roll with Q"
+autowrap_mode = 2
+
+[node name="Resume" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = -464.0
+offset_top = -124.0
+offset_right = 48.0
+offset_bottom = 4.0
+theme = SubResource("Theme_q8gpu")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5ky7c")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_rou2s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_35u12")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w0wmc")
+text = "Resume"
+
+[connection signal="pressed" from="Panel/Resume" to="." method="_on_resume_button_pressed"]

@@ -10,13 +10,15 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="2D Platformer"
 run/main_scene="res://scenes/level1/level1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [autoload]
 
-Music="*res://scenes/common/musicLevel1.tscn"
+Music="*res://scenes/common/music.tscn"
+Global="*res://scripts/common/global.gd"
+PauseMenu="*res://scenes/common/pause.tscn"
 
 [input]
 
