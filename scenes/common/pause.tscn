@@ -6,6 +6,10 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4p7kx"]
 bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 expand_margin_left = 8.0
 expand_margin_top = 8.0
 expand_margin_right = 8.0
@@ -15,12 +19,36 @@ expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rou2s"]
 bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35u12"]
 bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0wmc"]
 bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
@@ -34,18 +62,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 208.0
-offset_top = 60.0
+offset_top = 188.0
 offset_right = 208.0
-offset_bottom = 60.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = -600.0
-offset_top = -328.0
-offset_right = 192.0
-offset_bottom = -184.0
+offset_left = -608.0
+offset_top = -312.0
+offset_right = 240.0
+offset_bottom = -200.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_5p4u7")
 theme_override_font_sizes/font_size = 32
@@ -53,14 +81,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4p7kx")
 text = "Move with W,A,D or arrow keys
 
 Dodge/Roll with Q"
-autowrap_mode = 2
 
 [node name="Resume" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = -464.0
-offset_top = -124.0
-offset_right = 48.0
-offset_bottom = 4.0
+offset_left = -608.0
+offset_top = -120.0
+offset_right = 240.0
+offset_bottom = -8.0
 theme = SubResource("Theme_q8gpu")
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
