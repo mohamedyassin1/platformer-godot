@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8lhf077edjo0"]
+
+[ext_resource type="Script" uid="uid://ckh6sdfi8kpic" path="res://scripts/powerUp.gd" id="1_107r1"]
+[ext_resource type="Texture2D" uid="uid://cu0stqm41wxnc" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_g5cyg"]
+[ext_resource type="AudioStream" uid="uid://1go8aprb8mly" path="res://assets/brackeys_platformer_assets/sounds/power_up.wav" id="3_3a0ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5cyg"]
+size = Vector2(16, 16)
+
+[node name="PowerUp" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_107r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_g5cyg")
+hframes = 16
+vframes = 16
+frame = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_g5cyg")
+
+[node name="PowerupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3a0ef")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

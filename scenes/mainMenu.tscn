@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1ij3q3v2uyf3"]
+
+[ext_resource type="Script" uid="uid://841xtsmp8mgm" path="res://scripts/mainMenu.gd" id="1_48ign"]
+[ext_resource type="FontFile" uid="uid://bag8eh46dwt20" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_7nrmo"]
+
+[sub_resource type="Theme" id="Theme_agsvo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3qms"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mm0xs"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar6wn"]
+bg_color = Color(0.941176, 0.92549, 0.960784, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_48ign")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 31.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.596078, 0.862745, 1)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 208.0
+offset_top = 188.0
+offset_right = 208.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayTutorial" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = -614.0
+offset_top = -360.0
+offset_right = 234.0
+offset_bottom = -248.0
+scale = Vector2(1.00193, 1)
+theme = SubResource("Theme_agsvo")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7nrmo")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_j3qms")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mm0xs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar6wn")
+text = "Tutorial"
+
+[node name="PlayTutorial2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = -614.0
+offset_top = -90.0
+offset_right = 234.0
+offset_bottom = 38.0
+scale = Vector2(1.00193, 1)
+theme = SubResource("Theme_agsvo")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7nrmo")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxFlat_j3qms")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mm0xs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ar6wn")
+text = "Arcade Mode
+(Coming Soon)"
+
+[connection signal="pressed" from="Panel/PlayTutorial" to="." method="_on_play_tutorial_pressed"]

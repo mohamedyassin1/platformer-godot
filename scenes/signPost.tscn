@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cktlrek1d4eyg"]
+
+[ext_resource type="Script" uid="uid://cnetcbmf6hq3s" path="res://scripts/signPost.gd" id="1_i5yht"]
+[ext_resource type="Texture2D" uid="uid://cu0stqm41wxnc" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_xfye7"]
+[ext_resource type="FontFile" uid="uid://bag8eh46dwt20" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="3_kf86g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfye7"]
+size = Vector2(24, 19)
+
+[node name="SignPost" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_i5yht")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xfye7")
+hframes = 16
+vframes = 16
+frame = 56
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_xfye7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -47.0
+offset_top = -14.0
+offset_right = 48.0
+offset_bottom = -5.0
+theme_override_fonts/font = ExtResource("3_kf86g")
+theme_override_font_sizes/font_size = 8
+text = "Press E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
